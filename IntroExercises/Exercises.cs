@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,7 +72,20 @@ namespace IntroExercises
 
         public static int Count(int[] array, int value, int startIndex, int endIndex)
         {
-            return 0;
+            if (startIndex > endIndex || array.Length == 0)
+            {
+                return 0;
+           }
+
+            int contador = 0;
+              for (int i = startIndex; i < endIndex; i++)
+            {
+                if (array[i] == value)
+                {
+                    contador++;
+                }
+             }
+            return contador;
         }
 
         //TODO #5
@@ -84,7 +98,33 @@ namespace IntroExercises
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
         {
-            return true;
+
+            if (A.Length != B.Length)
+            {
+                return false;
+            }
+
+            int cont1 = 0;
+            int cont2 = 0;
+
+            for (int i = 0; i < A.Length; i++)
+            {
+                for (int j = 0; j < B.Length; j++)
+                {
+                    cont1 = Count(A, A[i]);
+                    cont2 = Count(B, A[i]);
+                    if (cont1 != cont2)
+                    {
+                        return false;
+                    }
+
+                }
+                return true;
+            }
+
+
+            
+            
         }
     }
 }

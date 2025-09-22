@@ -14,7 +14,7 @@ namespace IntroExercises
         public static int Find(int[] array, int value)
         {
 
-         for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == value)
                 {
@@ -52,8 +52,8 @@ namespace IntroExercises
             if (startIndex > endIndex || array.Length == 0)
             {
                 return -1;
-            
-           }
+
+            }
             for (int i = startIndex; i < endIndex; i++)
             {
                 if (array[i] == value)
@@ -61,8 +61,8 @@ namespace IntroExercises
                     return i;
                     break;
                 }
-             }
-           
+            }
+
             return -1;
         }
 
@@ -75,16 +75,16 @@ namespace IntroExercises
             if (startIndex > endIndex || array.Length == 0)
             {
                 return 0;
-           }
+            }
 
             int contador = 0;
-              for (int i = startIndex; i < endIndex; i++)
+            for (int i = startIndex; i < endIndex; i++)
             {
                 if (array[i] == value)
                 {
                     contador++;
                 }
-             }
+            }
             return contador;
         }
 
@@ -119,12 +119,12 @@ namespace IntroExercises
                     }
 
                 }
-                return true;
+                
             }
-
-
+            return true;
+        } 
             
             
         }
-    }
+    
 }

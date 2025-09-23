@@ -101,6 +101,12 @@ namespace IntroExercises
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
         {
+            if (A == null || B == null)
+            {
+                return false;
+            }
+            int la = A.Length;
+            int lb = B.Length;
 
             if (A.Length != B.Length)
             {
@@ -120,14 +126,9 @@ namespace IntroExercises
                     {
                         return false;
                     }
-
-                }
-                
+                }                
             }
             return true;
-        } 
-            
-            
-        }
-    
+        }             
+    }    
 }

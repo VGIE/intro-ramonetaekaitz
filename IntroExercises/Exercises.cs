@@ -53,10 +53,9 @@ namespace IntroExercises
         //-1 if endIndex is less than startIndex or any of them is outside the array
         public static int Find(int[] array, int value, int startIndex, int endIndex)
         {
-            if (startIndex > endIndex || array.Length == 0)
+            if (startIndex > endIndex || array == null || startIndex > array.Length || startIndex < 0  || endIndex < 0 || endIndex > array.Length )
             {
                 return -1;
-
             }
             for (int i = startIndex; i < endIndex; i++)
             {

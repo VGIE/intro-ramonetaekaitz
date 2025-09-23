@@ -13,7 +13,10 @@ namespace IntroExercises
         //Find should return the position in array where value appears for the first time. -1 if the value isn't found or the array is empty/null
         public static int Find(int[] array, int value)
         {
-
+            if(array == null)
+            {
+                return -1;
+            }
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == value)
@@ -29,11 +32,12 @@ namespace IntroExercises
         //Count should return the number of times value appears in array. 0 if the array is empty/null
         public static int Count(int[] array, int value)
         {
-            int contador = 0;
-            if (array.Length == 0)
+            if(array == null)
             {
                 return 0;
             }
+            int contador = 0;
+            
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == value)

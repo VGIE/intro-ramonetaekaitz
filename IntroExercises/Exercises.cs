@@ -75,7 +75,7 @@ namespace IntroExercises
 
         public static int Count(int[] array, int value, int startIndex, int endIndex)
         {
-            if (startIndex > endIndex || array.Length == 0)
+            if (startIndex > endIndex || array == null || startIndex > array.Length || startIndex < 0 || endIndex < 0 || endIndex > array.Length)
             {
                 return 0;
             }
